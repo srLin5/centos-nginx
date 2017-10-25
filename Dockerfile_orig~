@@ -11,7 +11,7 @@ RUN rpm -Uvh http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noar
  		rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm && \
  			yum update -y
 
-# Add JPackage
+# Add JPackage repo
 
 RUN cat > /etc/yum.repos.d/jpackage-generic.repo << EOF 
 [jpackage-generic]
@@ -156,6 +156,7 @@ VOLUME ["/home/website","/home/config","/home/logs"]
 # Start run shell 
 
 CMD ["bash"]
+
 
 
 
